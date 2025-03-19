@@ -1,16 +1,11 @@
 #Running the Project
 
-1.git clone https://github.com/your-repo/testimonial-section.git
-
+1.git clone https://github.com/sangeethashekaran/assesment-mitsigo
 2.cd  Assesment-hexnode
 
 3.run npm install for installing node modules in the project
 
 4.Run npm start
-
-
-
-
 
 
 
