@@ -1,13 +1,351 @@
-body {
+body, html {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  overflow-x: hidden;
+}
+.hero-container {
+  padding-bottom: 50px;
+  font-family: Arial, sans-serif;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Navbar */
+.navbar {
+  position: fixed;  /* Keep navbar fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure it's above all content */
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between; /* Ensures heading is left & button is right */
+  align-items: center;
 }
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: black;
+  font-family: Courier, monospace;
+}
+
+.trial-button {
+  background-color: red;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 64px;
+
+  
+}
+
+.trial-button:hover {
+  background-color: darkred;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;  /* Align items vertically */
+  justify-content: space-between;  /* Push text left and image right */
+  padding: 50px 20px;
+  background-color: black;
+}
+
+.hero-text {
+  flex: 1;  /* Allow text section to take available space */
+  max-width: 32%;  /* Limit width */
+  margin-left: 123px;
+}
+
+.hero-text h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;  /* Space between input and button */
+}
+
+.input-container input {
+  padding: 12px;
+  flex: 1; /* Make input field grow */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.cta-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.hero-image {
+  flex: 1;
+  max-width: 50%;  /* Limit image section width */
+  display: flex;
+  justify-content: flex-end; /* Push image to the right */
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+
+/* Footer Info */
+.hexnode-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 80px;
+  padding: 50px 80px; /* Adjust padding as needed */
+
+  background-color: #1A1C2B;
+}
+
+.info-box {
+  max-width: 300px;
+  text-align: left;
+  color:rgb(255,255,255,60%);
+  font-size: 14px;
+  flex: 1;
+  padding: 0 20px; /* Adds spacing */
+  position: relative;
+}
+
+.info-box:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 10%;
+  height: 80%; /* Adjusts height of the divider */
+  width: 0.5px;
+  background-color: rgb(255,255,255,60%);; /* Line color */
+}
+
+
+.info-box p {
+  font-size: 14px;
+}
+.container {
+  max-width: 1146px;
+
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+/* section 4 - h2 */
+.container h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color:#020a19;
+  text-align: center;
+}
+h1 {
+  font-size: 36px;
+  color:#020a19;
+  text-align: center;
+
+
+}
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-top: 37px;
+
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.tab {
+  background: none;
+  border: none;
+  padding: 19px 28px;
+  cursor: pointer;
+  font-size: 16px;
+  color: gray;
+}
+
+.tab.active {
+  background: black;
+  color: white;
+  border-radius: 5px 5px 0 0;
+}
+
+/* Content Box */
+.content-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(247 247 247);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.tabs-desc  {
+  text-align: left;
+  color: #020a19;
+  line-height: 48px;
+}
+
+.tabs-desc h3 {
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+
+.tabs-descul {
+  list-style: none;
+}
+
+.tabs-descli {
+  margin-bottom: 8px;
+}
+
+/* Image Box */
+.image-box img {
+  width: 364px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.content-box  p{
+  color:#333333
+}
+
+
+/* additional support styling
+ */
+.support {
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+  text-align: left;
+  align-items: center;
+}
+.support img {
+    width: 45%;
+    border-radius: 10px;
+}
+.content {
+  width: 50%;
+  padding-left: 30px;
+}
+.free-trial {
+  color: red;
+  font-weight: bold;
+  text-decoration: none;
+}
+.content p {
+  color: #333333;
+}
+.content h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color:#020a19;
+}
+
+
+/* testimonial section */
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #222;
+  margin: 40px 0 20px;
+}
+
+/* Testimonial Container */
+.testimonial-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 748px;
+  margin: auto;
+  height:240px;
+}
+
+/* Testimonial Content */
+.testimonial-content {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 15px;
+}
+
+/* Testimonial Image */
+.testimonial-img {
+  width: 344px;
+  height: 243px;
+  border-radius: 8px;
+}
+
+/* Testimonial Text */
+.testimonial-text {
+  max-width: 400px;
+}
+
+.quote {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.author {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.company {
+  font-size: 12px;
+  color: gray;
+}
+
+/* Navigation Arrows */
+.arrow {
+  background-color: #e0e0e0;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.arrow:hover {
+  background-color: #ccc;
+}
+
+/* Logo Section */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  opacity: 0.8;
+}
+
+.logo-container img {
+  height: 40px;
+}
+.section-title {
+  text-align: center;
+}
+
+
+

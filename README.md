@@ -1,3 +1,19 @@
+#Running the Project
+
+1.git clone https://github.com/your-repo/testimonial-section.git
+
+2.cd  Assesment-hexnode
+
+3.run npm install for installing node modules in the project
+
+4.Run npm start
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
